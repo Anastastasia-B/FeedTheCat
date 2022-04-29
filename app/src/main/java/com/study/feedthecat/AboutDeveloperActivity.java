@@ -15,7 +15,8 @@ public class AboutDeveloperActivity extends AppCompatActivity {
         setContentView(R.layout.activity_about_developer);
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        if (actionBar != null)
+            actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
     @Override

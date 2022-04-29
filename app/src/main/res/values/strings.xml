@@ -4,4 +4,9 @@
     <string name="feed">FEED</string>
     <string name="abut_developer_title">About Developer</string>
     <string name="abut_developer">Разработчик: Березнёва А.С. группа 951005 (лабораторная работа номер 1)</string>
+    <string name="save_score">Save Score</string>
+    <string name="results_table">Results Table</string>
+    <string name="name">Name</string>
+    <string name="date">Date</string>
+    <string name="score">Score</string>
 </resources>
