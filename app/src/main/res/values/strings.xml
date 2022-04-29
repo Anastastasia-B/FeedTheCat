@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FeedTheCat</string>
+    <string name="satiety">Satiety</string>
+    <string name="feed">FEED</string>
+    <string name="abut_developer_title">About Developer</string>
+    <string name="abut_developer">Разработчик: Березнёва А.С. группа 951005 (лабораторная работа номер 1)</string>
+</resources>
