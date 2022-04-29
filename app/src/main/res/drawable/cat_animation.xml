@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/cat_food_no_hearts_icon" android:duration="250" />
+    <item android:drawable="@drawable/cat_food_hearts_icon_1" android:duration="250" />
+    <item android:drawable="@drawable/cat_food_hearts_icon_2" android:duration="250" />
+    <item android:drawable="@drawable/cat_food_hearts_icon" android:duration="250" />
+    <item android:drawable="@drawable/cat_food_hearts_icon_4" android:duration="250" />
+    <item android:drawable="@drawable/cat_food_hearts_icon_5" android:duration="250" />
+    <item android:drawable="@drawable/cat_food_no_hearts_icon" android:duration="250" />
+    <item android:drawable="@drawable/cat_food_hearts_icon_1" android:duration="250" />
+    <item android:drawable="@drawable/cat_food_hearts_icon_2" android:duration="250" />
+    <item android:drawable="@drawable/cat_food_hearts_icon" android:duration="250" />
+    <item android:drawable="@drawable/cat_food_hearts_icon_4" android:duration="250" />
+    <item android:drawable="@drawable/cat_food_hearts_icon_5" android:duration="250" />
+    <item android:drawable="@drawable/cat_food_no_hearts_icon" android:duration="250" />
+</animation-list>
