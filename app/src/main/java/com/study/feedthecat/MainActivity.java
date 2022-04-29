@@ -11,6 +11,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
@@ -21,9 +25,13 @@ public class MainActivity extends AppCompatActivity {
     AnimationDrawable catAnimation;
     private TextView satietyValue;
     private int clicks = 0;
-    private String personName = "guest";
-    final String FILENAME = "achievements";
     private ImageView catImageView;
+
+    private String personName = "guest";
+    final String FILENAME = "results";
+
+    public GoogleSignInAccount account;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +42,19 @@ public class MainActivity extends AppCompatActivity {
         catImageView = (ImageView) findViewById(R.id.cat_image_view);
         catImageView.setBackgroundResource(R.drawable.cat_animation);
         catAnimation = (AnimationDrawable) catImageView.getBackground();
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+
+        account = GoogleSignIn.getLastSignedInAccount(this);
+
+        if (account == null) {
+            /*Intent signIn = new Intent(this,SignInActivity.class);
+            startActivity(signIn);*/
+        } else {
+            personName = account.getDisplayName();
+        }
     }
 
     public void feed_button_click(View view) {
@@ -98,6 +119,6 @@ public class MainActivity extends AppCompatActivity {
         Date date = new Date();
         @SuppressLint("SimpleDateFormat") SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         String formattedDate = formatter.format(date);
-        writeToFile("results",personName + " | " + formattedDate + " | " + clicks + "\n");
+        writeToFile(FILENAME,personName + " | " + formattedDate + " | " + clicks + "\n");
     }
 }
