@@ -32,7 +32,7 @@ public class SplashscreenActivity extends AppCompatActivity {
                         Intent intent = new Intent(SplashscreenActivity.this, MainActivity.class);
                         startActivity(intent);
                     }
-                }, 6000);
+                }, 5000);
     }
 
     public void onWindowFocusChanged(boolean hasFocus) {

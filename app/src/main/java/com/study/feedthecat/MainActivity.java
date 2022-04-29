@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         account = GoogleSignIn.getLastSignedInAccount(this);
 
         if (account == null) {
-            /*Intent signIn = new Intent(this,SignInActivity.class);
+            /* Intent signIn = new Intent(this,SignInActivity.class);
             startActivity(signIn);*/
         } else {
             personName = account.getDisplayName();
@@ -69,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }, 3250);
         }
-        writeResults();
     }
 
     @Override
