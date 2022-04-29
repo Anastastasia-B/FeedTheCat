@@ -3,4 +3,5 @@
     <item android:title="@string/abut_developer_title" android:id="@+id/item_about_developer"></item>
     <item android:title="@string/save_score" android:id="@+id/save_score_item"></item>
     <item android:title="@string/results_table" android:id="@+id/view_results_item"></item>
+    <item android:title="@string/share_score" android:id="@+id/share_score"></item>
 </menu>

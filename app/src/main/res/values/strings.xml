@@ -9,4 +9,5 @@
     <string name="name">Name</string>
     <string name="date">Date</string>
     <string name="score">Score</string>
+    <string name="share_score">Share Score</string>
 </resources>

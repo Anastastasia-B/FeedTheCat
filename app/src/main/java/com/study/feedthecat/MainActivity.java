@@ -91,7 +91,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.view_results_item:
                 Intent results = new Intent(this, ResultsActivity.class);
                 startActivity(results);
-            break;
+                break;
+            case R.id.share_score:
+                shareScore();
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -115,10 +118,18 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    void writeResults(){
+    void writeResults() {
         Date date = new Date();
         @SuppressLint("SimpleDateFormat") SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         String formattedDate = formatter.format(date);
         writeToFile(FILENAME,personName + " | " + formattedDate + " | " + clicks + "\n");
+    }
+
+    void shareScore() {
+        Intent myIntent = new Intent(Intent.ACTION_SEND);
+        myIntent.setType("text/plain");
+        String shareBody=String.valueOf(clicks);
+        myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+        startActivity(Intent.createChooser(myIntent,"Share Using"));
     }
 }
